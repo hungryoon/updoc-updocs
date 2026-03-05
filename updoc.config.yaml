@@ -1,11 +1,11 @@
-version: "0.3.0"
+version: "0.3.1"
 language: en
 projects:
   - name: updoc
     path: ./repos/updoc
     default_branch: main
-    last_sync_commit: 59e9086
-    last_sync_date: "2026-03-05T04:36:14Z"
+    last_sync_commit: d3ab04c
+    last_sync_date: "2026-03-05T05:32:00Z"
     type: claude-code-plugin
 docs:
   path: ./docs
