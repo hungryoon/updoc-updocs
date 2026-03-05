@@ -1,7 +1,5 @@
 ---
 project: updoc
-synced_from: d3ab04c
-synced_at: 2026-03-05
 ---
 
 # updoc — Features
@@ -12,6 +10,15 @@ Run `/updoc:up` and updoc scans your project code to produce structured document
 
 ### Smart Change Detection
 updoc tracks which commit was last documented. On the next run, it only examines files that changed since then, updating just the relevant documentation sections instead of regenerating everything.
+
+### Auto Pull
+Before scanning, updoc automatically runs `git pull --ff-only` on each project to fetch the latest code. If the pull fails, it continues with the current local state and warns you.
+
+### Version Guard
+updoc checks that the config file version matches the installed plugin version before running. If there's a mismatch, it stops with a clear error message — preventing documentation from being generated with incompatible logic.
+
+### Ask-User Policy
+When updoc encounters ambiguous or unverifiable information during documentation generation, it asks you directly instead of guessing. This prevents misunderstandings from silently entering your docs.
 
 ### Safe Content Separation
 Documentation files have clearly marked zones: auto-generated sections (inside marker blocks) and user-written sections (outside markers). updoc never touches your manual notes, custom explanations, or added context.
@@ -27,4 +34,7 @@ A single docs repository can manage documentation for multiple projects. Each pr
 
 ### Session Status Display
 Every time you start a Claude Code session in a docs repository, updoc shows a quick status: how many projects are registered, how many are synced, and when the last sync happened.
+
+### Workspace Protection
+`/updoc:init` sets up `CLAUDE.md` rules that prevent accidental modification of source repos under `repos/` and ensure all documentation work stays within `docs/`.
 <!-- updoc:end -->

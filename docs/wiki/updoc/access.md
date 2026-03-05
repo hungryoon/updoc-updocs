@@ -1,7 +1,5 @@
 ---
 project: updoc
-synced_from: d3ab04c
-synced_at: 2026-03-05
 ---
 
 # updoc — Access

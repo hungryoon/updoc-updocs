@@ -4,8 +4,8 @@ projects:
   - name: updoc
     path: ./repos/updoc
     default_branch: main
-    last_sync_commit: d3ab04c
-    last_sync_date: "2026-03-05T05:32:00Z"
+    last_sync_commit: 5e75c5a
+    last_sync_date: "2026-03-05T06:00:00Z"
     type: claude-code-plugin
 docs:
   path: ./docs

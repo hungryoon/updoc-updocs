@@ -1,7 +1,5 @@
 ---
 project: updoc
-synced_from: d3ab04c
-synced_at: 2026-03-05
 ---
 
 # updoc — Dependencies
@@ -15,7 +13,7 @@ updoc has no package manager dependencies (no package.json, go.mod, pyproject.to
 |------------|------|---------|
 | Claude Code | Host | Plugin runtime — executes skills, provides tool access (Read, Write, Glob, Grep, etc.) |
 | bash 3.2+ | System | Executes `scripts/init.sh`, `scripts/up.sh`, `hooks/session-start.sh` |
-| yq 4+ | System | Parses `updoc.config.yaml` in shell scripts |
+| yq 4+ | System | Parses `updoc.config.yaml` and `plugin.json` in shell scripts |
 | git | System | Repository operations: `git diff`, `git log`, `git pull --ff-only`, branch detection |
 
 ## Plugin System Dependencies
